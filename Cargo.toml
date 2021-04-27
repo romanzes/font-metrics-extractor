@@ -7,6 +7,4 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-skia-safe = "0.39.1"
-skia-bindings = "0.39.1"
-mozjpeg = "0.8.24"
+skia-safe = { git = "https://github.com/StewartCanva/rust-skia", rev = "826d16ae668a6e6dc20ad70c4794040d4c42a8da" }

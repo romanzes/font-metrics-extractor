@@ -4,14 +4,13 @@ use std::fs::File;
 use std::io::Read;
 
 fn main() {
-    let data = data_from_file_path(Path::new("EvolveSans-Bold.ttf"));
+    let data = data_from_file_path(Path::new("EvolveSans-Bold.woff2"));
     let typeface = Typeface::from_data(data, None).unwrap();
     let font = Font::new(typeface, 1.0);
     let (_, metrics) = font.metrics();
 
     println!("metrics.ascent: {}", metrics.ascent);
     println!("metrics.descent: {}", metrics.descent);
-    println!("{}", mozjpeg::DCTSIZE);
 }
 
 pub fn data_from_file_path(file_path: &Path) -> Data {
